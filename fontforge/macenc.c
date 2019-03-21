@@ -1435,6 +1435,7 @@ struct macsettingname macfeat_otftag[] = {
     { 4, 0, CHR('v','r','t','2') },	/* vertical forms => vertical rotation */
     /* { 4, 0, CHR('v','k','n','a') },	/\* vertical forms => vertical kana *\/ */
     { 6, 0, CHR('t','n','u','m') },	/* monospace numbers => Tabular numbers */
+    { 6, 1, CHR('p','n','u','m') },	/* proportional numbers => proportional numbers */
     { 10, 1, CHR('s','u','p','s') },	/* superior vertical position => superscript */
     { 10, 2, CHR('s','u','b','s') },	/* inferior vertical position => subscript */
     /* { 10, 3, CHR('s','u','p','s') },	/\* ordinal vertical position => superscript *\/ */
