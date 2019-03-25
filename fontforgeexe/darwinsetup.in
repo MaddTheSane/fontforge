@@ -25,7 +25,7 @@ if test -d "${prefsdir}" -a x"${PLUTIL}" != x":" ; then
   if test \! -e "${prefsdir}"/com.apple.x11.plist ; then
     cat <<EOF >"${prefsdir}"/com.apple.x11.plist
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>apps_menu</key>
