@@ -43,7 +43,7 @@ AT_CLEANUP
 #--------------------------------------------------------------------------
 # Fontforge Python Scripting test functions
 
-m4_defun([run_python_ff],[(${abs_top_builddir}/fontforgeexe/fontforge -lang py -script "${abs_srcdir}/$1" "$2" || /bin/false)])
+m4_defun([run_python_ff],[(${abs_top_builddir}/fontforgeexe/fontforge -lang py -script "${abs_srcdir}/$1" "$2" || /usr/bin/env false)])
 
 # check_python( name_of_test=$1, use test#=$2, skip_if_file_not_exist=$3 )
 # Test FontForge Python Scripting commands using various testXXXX.py files.
@@ -59,7 +59,7 @@ AT_CHECK([run_python_ff([$2],[$test_input])],[0],[ignore],[ignore])
 AT_CLEANUP
 ])
 
-m4_defun([run_python_py],[(PATH="${abs_top_builddir}/fontforge/.libs:${abs_top_builddir}/gutils/.libs:${abs_top_builddir}/Unicode/.libs:$PATH" PYTHONPATH="${abs_top_builddir}/pyhook/.libs" ${python_exec} -Ss "${abs_srcdir}/$1" "$2" || /bin/false)])
+m4_defun([run_python_py],[(PATH="${abs_top_builddir}/fontforge/.libs:${abs_top_builddir}/gutils/.libs:${abs_top_builddir}/Unicode/.libs:$PATH" PYTHONPATH="${abs_top_builddir}/pyhook/.libs" ${python_exec} -Ss "${abs_srcdir}/$1" "$2" || /usr/bin/env false)])
 
 m4_defun([check_python_py],[
 AT_SETUP([$1 [(with Python)]])
